@@ -1,0 +1,46 @@
+$page_min_height: 100vh;
+
+body {
+    min-height: $page_min_height;
+    width: 100%;
+    // overflow: hidden;
+}
+
+#sidebar {
+    min-height: $page_min_height;
+}
+
+.off-canvas-content {
+    padding: 20px 40px !important;
+    width: calc(100vw - 12rem);
+}
+
+.docs-content {
+    padding-top: 60px;
+}
+
+table.table-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+table.table-scroll{
+    -ms-overflow-style: none;
+    padding-bottom: 0 !important;
+}
+
+table.table th {
+    border-bottom-width: .05rem;
+}
+
+.table-bordered th, .table-bordered td {
+    border: .05rem solid #dadee4;
+}
+
+.table-bordered {
+    border: none;
+}
+
+table.table th.fit,
+table.table td.fit {
+    width: 1%;
+}

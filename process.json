@@ -1,0 +1,21 @@
+{
+    "script": "dist/app.js",
+    "name": "saolao_pos_api",
+    "exec_mode": "cluster",
+    "instances": 4,
+    "watch": ["server", "client"],
+    "watch_delay": 1000,
+    "ignore_watch" : ["node_modules"],
+    "env": {
+        "KEY": "secret",
+        "APP_NAME": "saolao_pos_api",
+        "TZ": "UTC",
+        "PORT": 4000,
+        "NODE_ENV": "production",
+        "DB_HOST": "localhost",
+        "DB_USER": "",
+        "DB_PWD": "",
+        "DB_NAME": "saolao_pos_db"
+
+    }
+}

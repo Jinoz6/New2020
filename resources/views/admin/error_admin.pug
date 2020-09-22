@@ -1,0 +1,14 @@
+extends ./layout
+
+block content
+    .columns
+        .column
+            
+            div.is-size-4 
+                span.has-text-danger Message: 
+                | #{message}
+            div.is-size-5 
+                span.has-text-danger Status: 
+                | #{error.status}
+            div.is-size-6.has-text-danger  Stack:
+            p #{error.stack}

@@ -1,0 +1,43 @@
+$custom-primary: #0485BD;
+$custom-accent: #fff;
+
+$fa-font-path: '/webfonts';
+
+$primary-color: #00A401;
+
+@font-face {
+    font-family: NotoSansLao;
+    src: url("/fonts/NotoSansLao-Regular.ttf");
+}
+
+body {
+    font-family: NotoSansLao, sans-serif !important;
+    font-size: 0.8rem !important;
+}
+
+.accordion:hover {
+    background: white;
+}
+
+.accordion-header {
+    font-size: .9rem;
+}
+
+a.accordion-header {
+    color: #3b4351 !important;
+    text-decoration: none !important;
+}
+
+.accordion-body { 
+    font-size: .8rem;
+    max-height: fit-content !important;
+}
+
+.table-bordered, .table-bordered th, .table-bordered td {
+    border: .05rem solid #dadee4;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+}

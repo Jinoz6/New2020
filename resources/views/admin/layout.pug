@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="csrf-token", content=(custom_csrf || '') )
+
+        link(rel="shortcut icon", href="/images/logo.jpg", type="image/x-icon")
+
+        title= title
+
+        link(rel='stylesheet', href='/stylesheets/ad/dashboard.css')
+
+        script(src="/javascripts/jquery/jquery.min.js")
+
+        //- script(src="/javascripts/d3.v5.js")
+        
+    body
+
+        .docs-container.off-canvas.off-canvas-sidebar-show
+
+            .navbar(style='height: 60px; position: fixed; right: 0; top: 0; z-index: 100; width: 100%; background: #f7f8f9;')
+                .navbar-section
+                    a.off-canvas-toggle.btn.btn-link.btn-action(href="#sidebar")
+                        i.icon.icon-menu
+
+                .navbar-section(style="padding-right: 20px;")
+                    .input-group.input-inline
+                        a.btn.btn-primary(href="/logout") 
+                            i.fas.fa-sign-out-alt
+                            | &nbsp;
+                            | Logout
+            
+            #sidebar.docs-sidebar.off-canvas-sidebar(style="width: 12rem;")
+
+                br
+
+                .docs-brand(style="text-align: center;")
+                    a.docs-logo(href="/admin")
+                        img(src="/images/logo.jpg", alt="Logo" style="width: 100px;")
+
+                br
+
+                .docs-nav(style="padding: .5rem 1rem;")
+                    .accordion-container
+
+                        .accordion
+                            a.accordion-header.c-hand(href="/admin") ໜ້າຫຼັກ
+
+            a#close.off-canvas-overlay(href="#close")
+
+            .off-canvas-content
+                .docs-content
+
+                    h2= title
+
+                    br
+                    br
+
+                    block content
+
+                    br

@@ -1,0 +1,33 @@
+@import "variables";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+// @import "bulma/bulma";
+@import "spectre.css/src/spectre";
+@import "spectre.css/src/spectre-icons";
+
+body {
+    background-color: $custom-primary;
+    min-height: 700px;
+    width: 100%;
+}
+
+body, body * {
+    color: $custom-accent;
+}
+
+.columns {
+    margin: 0;
+}
+
+.login-container input, .login-container i {
+    color: #000;
+}
+
+.login-container button.button.is-login-primary {
+
+    background-color: $custom-accent;
+    border-color: $custom-accent;
+    color: #000;
+    
+}

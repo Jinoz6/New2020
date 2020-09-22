@@ -1,0 +1,31 @@
+.columns
+  .column(style="padding-right: 0; padding-left: 0;")
+    nav.pagination.is-small(role='navigation' aria-label='pagination')
+      -var previous = (parseInt(currentPage) === 1)
+      -var next = (parseFloat(currentPage) >= parseFloat(totalPage))
+        if previous
+          a.pagination-previous(disabled) <
+        else
+          a.pagination-previous( href=fullpath+"?page=" + (parseInt(currentPage) - 1) + query_string ) <
+        if next
+          a.pagination-next(disabled) >
+        else
+          a.pagination-next( href=fullpath+"?page=" + (parseInt(currentPage) + 1) + query_string ) >
+        ul.pagination-list
+          - for (var i = 0; i < totalPage; i++) {
+          - if (parseInt(currentPage) === (i + 1) && (i + 1) <= 5 ) {
+            li
+              a.pagination-link.is-current(href=fullpath+"?page=" + (i + 1) + query_string ) #{i + 1}
+          -}else if((i + 1) <= 5) {
+            li
+              a.pagination-link(href=fullpath+"?page=" + (i + 1) + query_string ) #{i + 1}
+          -}else if((i + 1) === totalPage){
+            li
+              a.pagination-link(href=fullpath+"?page=" + (i + 1) + query_string ) #{i + 1}
+          -}else if((i + 1) === 6){
+            li
+              a ... 
+          -}else{
+            null
+          -}
+          - }      
